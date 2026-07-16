@@ -643,14 +643,14 @@ if __name__ == '__main__':
                     work_size = (blocks_wide * blocks_tall)
                     max_batches = math.floor(((ram_bytes / work_size) * .8))
                     
-                    if len(batch_optimizer_b) > 2:
+                    if len(batch_optimizer_b) > 25:
                         core_sizer = randint(min(batch_optimizer_b), max(batch_optimizer_b))
                         avg_batches = int(((sum(batch_optimizer_b) / len(batch_optimizer_b)) + min(batch_time.keys())) * .5)
                         if (avg_batches + core_sizer) < max_batches and (avg_batches - core_sizer) > 1:
                             batch_size = randint((avg_batches - core_sizer), (avg_batches + core_sizer))
                     else:
                         batch_size = randint(1, max_batches)
-                    if len(batch_optimizer_b) > 3:
+                    if len(batch_optimizer_b) > 100:
                         for i in range(20):
                             batch_optimizer_b = pixel_mean(batch_optimizer_b)
                     batches = []
