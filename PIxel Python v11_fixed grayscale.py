@@ -651,7 +651,7 @@ if __name__ == '__main__':
                     else:
                         batch_size = randint(1, max_batches)
                     if len(batch_optimizer_b) > 100:
-                        for i in range(20):
+                        for i in range(10):
                             batch_optimizer_b = pixel_mean(batch_optimizer_b)
                     batches = []
                     len_pixel_items = len(pixel_items)
