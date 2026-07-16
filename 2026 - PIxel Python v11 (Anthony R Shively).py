@@ -555,7 +555,7 @@ if __name__ == '__main__':
                     img_mod = (f.replace('.png', '_mod.png'))
                 if '.jpg' in f:
                     img_mod = (f.replace('.jpg', '_mod.jpg'))
-                img = Image.open(f)
+                img = Image.open(f).convert('RGB')
                 arr = np.array(img)
                 blocks_wide, blocks_tall = img.size
                 if blocks_wide > 5000 or blocks_tall > 5000:
