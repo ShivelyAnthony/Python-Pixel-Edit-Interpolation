@@ -11,6 +11,7 @@ x1 does look sharper than x2 but it does score less for some reason, use whateve
 
 
 Get H264 code and stick it with python.exe
+
 py -3.14 -c "import sys; print(sys.executable)"
 https://github.com/cisco/openh264/releases
 
